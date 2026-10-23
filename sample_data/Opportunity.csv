@@ -1,0 +1,7 @@
+Id,Name,Amount,CloseDate,Probability,StageName,Description,AccountId
+006SAMPLE0000001AAA,Savanna - Fleet tracking rollout,2400000,2026-12-15,60,Proposal/Price Quote,120 vehicles,001SAMPLE0000001AAA
+006SAMPLE0000002AAA,Kilima - EU export CRM,850000,2026-11-30,40,Needs Analysis,,001SAMPLE0000002AAA
+006SAMPLE0000003AAA,Lakeside - Patient portal,1300000,2027-02-28,20,Qualification,Phase 1 only,001SAMPLE0000003AAA
+006SAMPLE0000004AAA,Pwani - Installer field app,,2027-01-20,10,Prospecting,Amount not yet scoped,001SAMPLE0000004AAA
+006SAMPLE0000005AAA,Rift Valley - Analytics add-on,450000,2026-11-10,90,Negotiation/Review,,001SAMPLE0000005AAA
+006SAMPLE0000006AAA,Orphan deal - account deleted,300000,2026-12-01,30,Qualification,Points to an account that no longer exists,001SAMPLE0000099AAA

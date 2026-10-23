@@ -1,0 +1,8 @@
+Id,FirstName,LastName,Email,Phone,MobilePhone,Title,MailingCity,MailingCountry,AccountId
+003SAMPLE0000001AAA,Amina,Otieno,amina.otieno@savanna-logistics.example,+254 20 555 0111,+254 700 000 111,Operations Director,Nairobi,Kenya,001SAMPLE0000001AAA
+003SAMPLE0000002AAA,Brian,Mwangi,brian.mwangi@savanna-logistics.example,+254 20 555 0112,,Procurement Lead,Nairobi,Kenya,001SAMPLE0000001AAA
+003SAMPLE0000003AAA,Wanjiru,Kamau,wanjiru@kilima-coffee.example,+254 20 555 0113,+254 700 000 113,CEO,Nyeri,Kenya,001SAMPLE0000002AAA
+003SAMPLE0000004AAA,Daniel,Ochieng,d.ochieng@lakeside-health.example,,+254 700 000 114,IT Manager,Kisumu,Kenya,001SAMPLE0000003AAA
+003SAMPLE0000005AAA,Fatuma,Hassan,fatuma.hassan@pwani-solar.example,+254 41 555 0115,,Finance Manager,Mombasa,Kenya,001SAMPLE0000004AAA
+003SAMPLE0000006AAA,Kevin,Kiprop,kevin.kiprop@rv-agritech.example,+254 51 555 0116,,Founder,Nakuru,Kenya,001SAMPLE0000005AAA
+003SAMPLE0000007AAA,Grace,Njeri,grace.njeri@freelance.example,,+254 700 000 117,Consultant,Nairobi,Kenya,

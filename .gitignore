@@ -1,0 +1,15 @@
+# secrets
+.env
+.token_cache.bin
+
+# real customer data and run output stay local
+data/
+reports/migration_report.md
+
+# python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/

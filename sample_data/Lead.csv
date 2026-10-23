@@ -1,0 +1,5 @@
+Id,FirstName,LastName,Company,Email,Phone,Title,City,Country
+00QSAMPLE0000001AAA,Joseph,Mutua,Machakos Dairy Co-op,joseph@machakos-dairy.example,+254 44 555 0201,Chairman,Machakos,Kenya
+00QSAMPLE0000002AAA,Esther,Wambui,Thika Textiles,esther.w@thika-textiles.example,+254 67 555 0202,Sales Manager,Thika,Kenya
+00QSAMPLE0000003AAA,Ali,Abdi,Garissa Water Services,ali.abdi@garissa-water.example,,Engineer,Garissa,Kenya
+00QSAMPLE0000004AAA,Mercy,Chebet,Eldoret Fresh Produce,mercy@eldoret-fresh.example,+254 53 555 0204,Owner,Eldoret,Kenya

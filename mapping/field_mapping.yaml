@@ -1,0 +1,93 @@
+# Salesforce -> Dynamics 365 (Dataverse) field mapping
+#
+# Each object lists:
+#   source:      Salesforce object API name (also the CSV file name in data/extract/)
+#   target:      Dataverse table logical name
+#   entity_set:  Dataverse Web API collection name (used in URLs)
+#   key_column:  custom Dataverse column that stores the original Salesforce Id
+#                (lets us re-run the load safely and re-link relationships)
+#   fields:      Salesforce field -> Dataverse column
+#   lookups:     Salesforce reference field -> Dataverse lookup (navigation property)
+#   defaults:    values added to every record (templates use {SalesforceField})
+#
+# Load order matters: parents (Account) must exist before children (Contact, Opportunity).
+
+load_order: [Account, Contact, Opportunity, Lead]
+
+objects:
+  Account:
+    target: account
+    entity_set: accounts
+    key_column: new_salesforceid
+    fields:
+      Name: name
+      Phone: telephone1
+      Website: websiteurl
+      BillingStreet: address1_line1
+      BillingCity: address1_city
+      BillingState: address1_stateorprovince
+      BillingPostalCode: address1_postalcode
+      BillingCountry: address1_country
+      NumberOfEmployees: {column: numberofemployees, type: int}
+      AnnualRevenue: {column: revenue, type: money}
+      Description: description
+
+  Contact:
+    target: contact
+    entity_set: contacts
+    key_column: new_salesforceid
+    fields:
+      FirstName: firstname
+      LastName: lastname
+      Email: emailaddress1
+      Phone: telephone1
+      MobilePhone: mobilephone
+      Title: jobtitle
+      MailingCity: address1_city
+      MailingCountry: address1_country
+    lookups:
+      AccountId:
+        navigation: parentcustomerid_account
+        parent_object: Account
+
+  Opportunity:
+    target: opportunity
+    entity_set: opportunities
+    key_column: new_salesforceid
+    fields:
+      Name: name
+      Amount: {column: estimatedvalue, type: money}
+      CloseDate: {column: estimatedclosedate, type: date}
+      Probability: {column: closeprobability, type: int}
+      StageName: stepname
+      Description: description
+    defaults:
+      # "User provided" revenue, so Dynamics keeps the Salesforce Amount
+      # instead of recalculating it from (non-existent) product lines.
+      isrevenuesystemcalculated: false
+    lookups:
+      AccountId:
+        navigation: parentaccountid
+        parent_object: Account
+
+  Lead:
+    target: lead
+    entity_set: leads
+    key_column: new_salesforceid
+    fields:
+      FirstName: firstname
+      LastName: lastname
+      Company: companyname
+      Email: emailaddress1
+      Phone: telephone1
+      Title: jobtitle
+      City: address1_city
+      Country: address1_country
+    defaults:
+      # "Topic" is required on a Dynamics lead; Salesforce has no equivalent field.
+      subject: "{Company} (imported from Salesforce)"
+
+# Deliberately NOT migrated in this project (documented in docs/04-map-fields.md):
+#   - Industry / LeadSource / Rating picklists (need option-set value mapping)
+#   - Opportunity Won/Lost status (needs Dynamics "close opportunity" action)
+#   - Owners, Activities, Attachments, Apex/Flows (rebuilt, not copied)

@@ -1,0 +1,6 @@
+Id,Name,Phone,Website,BillingStreet,BillingCity,BillingState,BillingPostalCode,BillingCountry,NumberOfEmployees,AnnualRevenue,Description
+001SAMPLE0000001AAA,Savanna Logistics Ltd,+254 20 555 0101,https://savanna-logistics.example,12 Mombasa Road,Nairobi,Nairobi,00100,Kenya,240,18500000,Freight and warehousing
+001SAMPLE0000002AAA,Kilima Coffee Exporters,+254 20 555 0102,https://kilima-coffee.example,4 Kenyatta Avenue,Nyeri,Nyeri,10100,Kenya,85,6200000,Specialty coffee exporter
+001SAMPLE0000003AAA,Lakeside Health Clinics,+254 57 555 0103,,Oginga Odinga St,Kisumu,Kisumu,40100,Kenya,130,,Network of outpatient clinics
+001SAMPLE0000004AAA,Pwani Solar Solutions,+254 41 555 0104,https://pwani-solar.example,Moi Avenue,Mombasa,Mombasa,80100,Kenya,"1,050",42000000,Residential and commercial solar
+001SAMPLE0000005AAA,Rift Valley Agritech,+254 51 555 0105,https://rv-agritech.example,Kenyatta Lane,Nakuru,Nakuru,20100,Kenya,60,3100000,Farm management software
